@@ -39,6 +39,7 @@ function openGoogle() {
 const mainTitleMouseover = document.querySelector(".product-card__main-title");
 
 mainTitleMouseover.addEventListener("mouseover", (event) => {
+  console.log("Выбери свой продукт")
 });
 
 //  Изменение цвета кнопки
@@ -48,6 +49,5 @@ const recolorButton = document.getElementById("recolor-button");
 recolorButton.classList.add("purple-bg");
 recolorButton.addEventListener("click", () => {
   recolorButton.classList.toggle("purple-bg");
-  recolorButton.classList.toggle("pink-bg");
 });
 

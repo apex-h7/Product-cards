@@ -14,10 +14,11 @@
 
 .buttons {
   position: absolute;
-  display:flex;
+  display: flex;
   top: 13px;
   right: 20%;
   gap: 20px;
+  z-index: 3;
 }
 
 .buttons button {
@@ -136,10 +137,5 @@
 
 .purple-bg {
   background-color: #b78bc9;
-  color: black
-}
-
-.pink-bg {
-  background-color: #f940af;
   color: white
 }
