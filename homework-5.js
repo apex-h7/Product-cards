@@ -14,7 +14,7 @@ const LIGHT_SPEED = 299792458;
 
 let lightSpeed = 299792458;
 
-const measureLightSpeed = (speed) => {
+const compareLightSpeed = (speed) => {
   if (speed > 299792458) {  
   console.log("Сверхсветовая скорость");
 } else if (speed === 299792458) {
@@ -23,16 +23,14 @@ const measureLightSpeed = (speed) => {
   console.log("Субсветовая скорость");
   }
 };
-measureLightSpeed(100);
+compareLightSpeed(100);
 
 
 // (5) Создание переменнной №1 и №2. Создание функции, которая
 //     принмает один параметр 
 
 let fabric = "Шелк";
-console.log(fabric);
 let price = 100000;
-console.log(price);
 
 const buyProduct = (budget) => {
   if (budget >= price) {
@@ -44,6 +42,7 @@ const buyProduct = (budget) => {
 };
 buyProduct(50000);
 
+
 // (6) Создание и именование функции
 
 const reviewList = () => {
@@ -54,10 +53,8 @@ const reviewList = () => {
 // (7) Созднаие трех переменных 
 
 let announcement = "Встреча состоится 18 марта 2026г.";
-  console.log(announcement);
 
 const aboutMe = "Я мусульманка, делаю дизайн для презентаций. Мне 39 лет.";
-  console.log(aboutMe);
   
 let portfolio = "Портфолио моих работ.";
   console.log(portfolio);
