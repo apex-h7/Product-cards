@@ -7,17 +7,37 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 const fabrics = ["Шелк", "Хлопок","Бархат", "Твид"];
-  const hasSilk = fabrics.includes("Шелк");
+const hasSilk = fabrics.includes("Шелк");
 
 
-const reverseMyData = (array) => {
-  return array.reverse();
-};
+const reverseMyData = (array) => [...array].reverse();
 
-
-const reverseArray = (dataList) => {
-  return dataList.reverse();
-};
 
 const reversedNumbers = reverseArray(numbers);
 const reversedFabrics = reverseArray(fabrics);
+
+const filteredByCom = commentsSocialNetworks.filter((comment) => {
+  return comment.email.includes(".com");
+});
+
+const updatedComments = commentsSocialNetworks.map((comment) => ({
+  ...comment,
+  postId: comment.id <= 5 ? 2 : 1
+}));
+
+const twoParameters = commentsSocialNetworks.map((comment) => ({
+  id: comment.id,
+  name: comment.name
+}));
+
+const validatedComments = commentsSocialNetworks.map((comment) => ({
+  ...comment,
+  isInvalid: comment.body.length > 180 ? true : false
+}));
+
+const emailsReduce = commentsSocialNetworks.reduce((accumulator, comment) => {
+  accumulator.push(comment.email);
+  return accumulator;
+},[]);
+
+const finalEmailsString = emailsReduce.join(", ");
