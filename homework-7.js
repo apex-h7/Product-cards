@@ -10,8 +10,8 @@ const hasSilk = fabrics.includes("Шелк");
 
 const reverseMyData = (array) => [...array].reverse();
 
-const reversedNumbers = reverseArray(numbers);
-const reversedFabrics = reverseArray(fabrics);
+const reversedNumbers = reverseMyData(numbers);
+const reversedFabrics = reverseMyData(fabrics);
 
 const commentsfilteredByComEmail = commentsSocialNetworks.filter((comment) => {
   return comment.email.includes(".com");

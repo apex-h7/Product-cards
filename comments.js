@@ -62,29 +62,3 @@ export const commentsSocialNetworks = [
     email: "Carmen_Keeling@caroline.name",
     body: "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis"
   }];
-
-const filteredByCom = commentsSocialNetworks.filter((comment) => {
-  return comment.email.includes(".com");
-});
-
-const updatedComments = commentsSocialNetworks.map((comment) => ({
-  ...comment,
-  postId: comment.id <= 5 ? 2 : 1
-}));
-
-const twoParameters = commentsSocialNetworks.map((comment) => ({
-  id: comment.id,
-  name: comment.name
-}));
-
-const validatedComments = commentsSocialNetworks.map((comment) => ({
-  ...comment,
-  isInvalid: comment.body.length > 180 ? true : false
-}));
-
-const emailsReduce = commentsSocialNetworks.reduce((accumulator, comment) => {
-  accumulator.push(comment.email);
-  return accumulator;
-},[]);
-
-const finalEmailsString = emailsReduce.join(", ");
