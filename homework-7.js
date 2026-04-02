@@ -5,18 +5,15 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return number >= 5;
 });
 
-
 const fabrics = ["Шелк", "Хлопок","Бархат", "Твид"];
 const hasSilk = fabrics.includes("Шелк");
 
-
 const reverseMyData = (array) => [...array].reverse();
-
 
 const reversedNumbers = reverseArray(numbers);
 const reversedFabrics = reverseArray(fabrics);
 
-const filteredByCom = commentsSocialNetworks.filter((comment) => {
+const commentsfilteredByComEmail = commentsSocialNetworks.filter((comment) => {
   return comment.email.includes(".com");
 });
 
@@ -25,19 +22,19 @@ const updatedComments = commentsSocialNetworks.map((comment) => ({
   postId: comment.id <= 5 ? 2 : 1
 }));
 
-const twoParameters = commentsSocialNetworks.map((comment) => ({
+const commentNames = commentsSocialNetworks.map((comment) => ({
   id: comment.id,
   name: comment.name
 }));
 
 const validatedComments = commentsSocialNetworks.map((comment) => ({
   ...comment,
-  isInvalid: comment.body.length > 180 ? true : false
+  isInvalid: comment.body.length > 180
 }));
 
-const emailsReduce = commentsSocialNetworks.reduce((accumulator, comment) => {
+const commentEmailsByReduce = commentsSocialNetworks.reduce((accumulator, comment) => {
   accumulator.push(comment.email);
   return accumulator;
-},[]);
+}, []);
 
-const finalEmailsString = emailsReduce.join(", ");
+const joinedEmails = commentEmailsByReduce.join(", ");
